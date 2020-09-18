@@ -83,6 +83,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiDoze
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.2-service.clearkey
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd

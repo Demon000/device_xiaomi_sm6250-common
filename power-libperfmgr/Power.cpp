@@ -29,7 +29,6 @@
 #include <linux/input.h>
 
 #include "Power.h"
-#include "display-helper.h"
 
 constexpr int kWakeupModeOff = 4;
 constexpr int kWakeupModeOn = 5;
@@ -145,13 +144,6 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
             }
             break;
         case PowerHint_1_0::LOW_POWER:
-            if (data) {
-                // Device in battery saver mode, enable display low power mode
-                set_display_lpm(true);
-            } else {
-                // Device exiting battery saver mode, disable display low power mode
-                set_display_lpm(false);
-            }
             break;
         default:
             break;
